@@ -1,0 +1,331 @@
+/* GameScreen styles */
+
+.game-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #0f172a;
+  overflow: hidden;
+}
+
+/* Header */
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #1e293b;
+  color: white;
+  flex-shrink: 0;
+}
+
+.game-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.game-btn:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.song-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: #f1f5f9;
+}
+
+.difficulty-badge {
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #1e293b;
+}
+
+.score-display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.score-label {
+  font-size: 12px;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.score-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+/* Stats bar */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 8px 16px;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+  flex-shrink: 0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+.stat.multiplier .stat-value {
+  color: #4ade80;
+}
+
+.midi-indicator {
+  background: #22c55e;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Progress bar */
+.progress-bar {
+  height: 4px;
+  background: #334155;
+  flex-shrink: 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22d3ee, #4ade80);
+  transition: width 0.1s;
+}
+
+/* Notes area */
+.notes-area {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(to bottom, #1e293b 0%, #0f172a 100%);
+  overflow: hidden;
+}
+
+/* Lane guides */
+.lane-guides {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.lane-guide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Hit line */
+.hit-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #22d3ee;
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+  z-index: 10;
+}
+
+/* Falling notes */
+.falling-note {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 7.5%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #78350f;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  will-change: transform;
+  transition: opacity 0.15s;
+}
+
+.falling-note.black {
+  width: 5%;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: #faf5ff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.falling-note.hit {
+  transform: scale(0.8);
+}
+
+.falling-note.hit-perfect {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%) !important;
+}
+
+.falling-note.hit-great {
+  background: linear-gradient(135deg, #a3e635 0%, #84cc16 100%) !important;
+}
+
+.falling-note.hit-good {
+  background: linear-gradient(135deg, #facc15 0%, #eab308 100%) !important;
+}
+
+.falling-note.hit-miss {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%) !important;
+}
+
+/* Overlays */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.9);
+  z-index: 20;
+  cursor: pointer;
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.overlay-icon {
+  font-size: 64px;
+  color: #22d3ee;
+}
+
+.overlay-text {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+}
+
+.overlay-hint {
+  font-size: 16px;
+  color: #94a3b8;
+}
+
+.start-overlay .overlay-icon {
+  animation: pulse-scale 1.5s infinite;
+}
+
+@keyframes pulse-scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Controls */
+.game-controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background: #1e293b;
+  flex-shrink: 0;
+}
+
+.control-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.1s, background 0.15s;
+}
+
+.control-btn:active {
+  transform: scale(0.95);
+}
+
+.control-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.control-btn.pause {
+  background: #64748b;
+  color: white;
+}
+
+.control-btn.resume {
+  background: #22c55e;
+  color: white;
+}
+
+.control-btn.restart {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Keyboard container */
+.keyboard-container {
+  background: #e2e8f0;
+  padding: 12px 8px 24px;
+  flex-shrink: 0;
+}
+
+/* iPad adjustments */
+@media (min-width: 768px) {
+  .falling-note {
+    height: 56px;
+    font-size: 18px;
+  }
+
+  .overlay-icon {
+    font-size: 80px;
+  }
+
+  .overlay-text {
+    font-size: 40px;
+  }
+}

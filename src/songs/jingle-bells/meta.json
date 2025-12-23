@@ -1,0 +1,14 @@
+{
+  "id": "jingle-bells",
+  "title": "Jingle Bells",
+  "shortTitle": "Jingle Bells",
+  "bpm": 120,
+  "midiRange": [60, 72],
+  "thumbnail": "bell",
+  "color": "#fca5a5",
+  "difficulty": {
+    "simple": "Easy - Jingle bells chorus only",
+    "medium": "Medium - Full chorus",
+    "hard": "Hard - With left hand accompaniment"
+  }
+}

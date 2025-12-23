@@ -1,0 +1,44 @@
+{
+  "difficulty": "hard",
+  "description": "Full chorus with bass notes",
+  "notes": [
+    { "timeMs": 0, "midi": 64, "durationMs": 300 },
+    { "timeMs": 0, "midi": 48, "durationMs": 700 },
+    { "timeMs": 350, "midi": 64, "durationMs": 300 },
+    { "timeMs": 700, "midi": 64, "durationMs": 600 },
+
+    { "timeMs": 1400, "midi": 64, "durationMs": 300 },
+    { "timeMs": 1400, "midi": 48, "durationMs": 700 },
+    { "timeMs": 1750, "midi": 64, "durationMs": 300 },
+    { "timeMs": 2100, "midi": 64, "durationMs": 600 },
+
+    { "timeMs": 2800, "midi": 64, "durationMs": 300 },
+    { "timeMs": 2800, "midi": 48, "durationMs": 300 },
+    { "timeMs": 3150, "midi": 67, "durationMs": 300 },
+    { "timeMs": 3150, "midi": 55, "durationMs": 300 },
+    { "timeMs": 3500, "midi": 60, "durationMs": 300 },
+    { "timeMs": 3850, "midi": 62, "durationMs": 300 },
+    { "timeMs": 4200, "midi": 64, "durationMs": 1000 },
+    { "timeMs": 4200, "midi": 48, "durationMs": 1000 },
+
+    { "timeMs": 5600, "midi": 65, "durationMs": 300 },
+    { "timeMs": 5600, "midi": 53, "durationMs": 600 },
+    { "timeMs": 5950, "midi": 65, "durationMs": 300 },
+    { "timeMs": 6300, "midi": 65, "durationMs": 300 },
+    { "timeMs": 6650, "midi": 65, "durationMs": 300 },
+    { "timeMs": 7000, "midi": 65, "durationMs": 300 },
+    { "timeMs": 7000, "midi": 53, "durationMs": 600 },
+    { "timeMs": 7350, "midi": 64, "durationMs": 300 },
+    { "timeMs": 7700, "midi": 64, "durationMs": 300 },
+    { "timeMs": 8050, "midi": 64, "durationMs": 300 },
+    { "timeMs": 8400, "midi": 64, "durationMs": 300 },
+    { "timeMs": 8400, "midi": 48, "durationMs": 600 },
+    { "timeMs": 8750, "midi": 62, "durationMs": 300 },
+    { "timeMs": 9100, "midi": 62, "durationMs": 300 },
+    { "timeMs": 9450, "midi": 64, "durationMs": 600 },
+    { "timeMs": 10100, "midi": 62, "durationMs": 600 },
+    { "timeMs": 10100, "midi": 50, "durationMs": 600 },
+    { "timeMs": 10750, "midi": 67, "durationMs": 700 },
+    { "timeMs": 10750, "midi": 55, "durationMs": 700 }
+  ]
+}

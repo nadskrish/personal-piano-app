@@ -1,0 +1,12 @@
+{
+  "difficulty": "simple",
+  "description": "Jingle bells, jingle bells - just the main phrase",
+  "notes": [
+    { "timeMs": 0, "midi": 64, "durationMs": 400 },
+    { "timeMs": 500, "midi": 64, "durationMs": 400 },
+    { "timeMs": 1000, "midi": 64, "durationMs": 800 },
+    { "timeMs": 2000, "midi": 64, "durationMs": 400 },
+    { "timeMs": 2500, "midi": 64, "durationMs": 400 },
+    { "timeMs": 3000, "midi": 64, "durationMs": 800 }
+  ]
+}

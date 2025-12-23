@@ -1,0 +1,21 @@
+{
+  "difficulty": "medium",
+  "description": "Full first verse melody",
+  "notes": [
+    { "timeMs": 0, "midi": 60, "durationMs": 500 },
+    { "timeMs": 600, "midi": 60, "durationMs": 500 },
+    { "timeMs": 1200, "midi": 67, "durationMs": 500 },
+    { "timeMs": 1800, "midi": 67, "durationMs": 500 },
+    { "timeMs": 2400, "midi": 69, "durationMs": 500 },
+    { "timeMs": 3000, "midi": 69, "durationMs": 500 },
+    { "timeMs": 3600, "midi": 67, "durationMs": 1000 },
+
+    { "timeMs": 4800, "midi": 65, "durationMs": 500 },
+    { "timeMs": 5400, "midi": 65, "durationMs": 500 },
+    { "timeMs": 6000, "midi": 64, "durationMs": 500 },
+    { "timeMs": 6600, "midi": 64, "durationMs": 500 },
+    { "timeMs": 7200, "midi": 62, "durationMs": 500 },
+    { "timeMs": 7800, "midi": 62, "durationMs": 500 },
+    { "timeMs": 8400, "midi": 60, "durationMs": 1000 }
+  ]
+}

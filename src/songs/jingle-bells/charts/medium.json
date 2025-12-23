@@ -1,0 +1,34 @@
+{
+  "difficulty": "medium",
+  "description": "Jingle bells chorus - full melody",
+  "notes": [
+    { "timeMs": 0, "midi": 64, "durationMs": 350 },
+    { "timeMs": 400, "midi": 64, "durationMs": 350 },
+    { "timeMs": 800, "midi": 64, "durationMs": 700 },
+
+    { "timeMs": 1600, "midi": 64, "durationMs": 350 },
+    { "timeMs": 2000, "midi": 64, "durationMs": 350 },
+    { "timeMs": 2400, "midi": 64, "durationMs": 700 },
+
+    { "timeMs": 3200, "midi": 64, "durationMs": 350 },
+    { "timeMs": 3600, "midi": 67, "durationMs": 350 },
+    { "timeMs": 4000, "midi": 60, "durationMs": 350 },
+    { "timeMs": 4400, "midi": 62, "durationMs": 350 },
+    { "timeMs": 4800, "midi": 64, "durationMs": 1200 },
+
+    { "timeMs": 6400, "midi": 65, "durationMs": 350 },
+    { "timeMs": 6800, "midi": 65, "durationMs": 350 },
+    { "timeMs": 7200, "midi": 65, "durationMs": 350 },
+    { "timeMs": 7600, "midi": 65, "durationMs": 350 },
+    { "timeMs": 8000, "midi": 65, "durationMs": 350 },
+    { "timeMs": 8400, "midi": 64, "durationMs": 350 },
+    { "timeMs": 8800, "midi": 64, "durationMs": 350 },
+    { "timeMs": 9200, "midi": 64, "durationMs": 350 },
+    { "timeMs": 9600, "midi": 64, "durationMs": 350 },
+    { "timeMs": 10000, "midi": 62, "durationMs": 350 },
+    { "timeMs": 10400, "midi": 62, "durationMs": 350 },
+    { "timeMs": 10800, "midi": 64, "durationMs": 700 },
+    { "timeMs": 11600, "midi": 62, "durationMs": 700 },
+    { "timeMs": 12400, "midi": 67, "durationMs": 800 }
+  ]
+}

@@ -1,0 +1,141 @@
+/* PianoKeyboard styles */
+
+.piano-keyboard {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  user-select: none;
+  touch-action: none;
+}
+
+.white-keys {
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+.black-keys {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  pointer-events: none;
+}
+
+.piano-key {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 12px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.05s, background-color 0.1s;
+  font-family: inherit;
+}
+
+/* White keys */
+.piano-key.white {
+  background: linear-gradient(to bottom, #fff 0%, #f8f8f8 100%);
+  border-radius: 0 0 8px 8px;
+  box-shadow:
+    inset 0 -4px 0 rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.15);
+  margin: 0 2px;
+  pointer-events: auto;
+}
+
+.piano-key.white:active,
+.piano-key.white.pressed {
+  transform: translateY(2px);
+  box-shadow:
+    inset 0 -2px 0 rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #f0f0f0 0%, #e8e8e8 100%);
+}
+
+.piano-key.white .key-label {
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Black keys */
+.piano-key.black {
+  position: absolute;
+  height: 100%;
+  background: linear-gradient(to bottom, #333 0%, #111 100%);
+  border-radius: 0 0 6px 6px;
+  box-shadow:
+    inset 0 -3px 0 rgba(255, 255, 255, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.piano-key.black:active,
+.piano-key.black.pressed {
+  transform: translateY(2px);
+  box-shadow:
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #222 0%, #000 100%);
+}
+
+.piano-key.black .key-label {
+  color: #999;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Hint state - next note to play */
+.piano-key.hint {
+  animation: hint-pulse 0.8s infinite;
+}
+
+.piano-key.white.hint {
+  background: linear-gradient(to bottom, #a5f3fc 0%, #67e8f9 100%);
+  box-shadow:
+    inset 0 -4px 0 rgba(0, 0, 0, 0.1),
+    0 0 20px rgba(34, 211, 238, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.piano-key.black.hint {
+  background: linear-gradient(to bottom, #0ea5e9 0%, #0284c7 100%);
+  box-shadow:
+    inset 0 -3px 0 rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(34, 211, 238, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes hint-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+/* Hit feedback states */
+.piano-key.hit-perfect {
+  background: linear-gradient(to bottom, #4ade80 0%, #22c55e 100%) !important;
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.6) !important;
+}
+
+.piano-key.hit-great {
+  background: linear-gradient(to bottom, #a3e635 0%, #84cc16 100%) !important;
+  box-shadow: 0 0 25px rgba(132, 204, 22, 0.5) !important;
+}
+
+.piano-key.hit-good {
+  background: linear-gradient(to bottom, #facc15 0%, #eab308 100%) !important;
+  box-shadow: 0 0 20px rgba(234, 179, 8, 0.5) !important;
+}
+
+.piano-key.hit-miss,
+.piano-key.hit-wrong_note {
+  background: linear-gradient(to bottom, #f87171 0%, #ef4444 100%) !important;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.5) !important;
+}

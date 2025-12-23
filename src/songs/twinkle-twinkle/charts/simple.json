@@ -1,0 +1,13 @@
+{
+  "difficulty": "simple",
+  "description": "Right hand melody - 7 notes, slow tempo",
+  "notes": [
+    { "timeMs": 0, "midi": 60, "durationMs": 600 },
+    { "timeMs": 700, "midi": 60, "durationMs": 600 },
+    { "timeMs": 1400, "midi": 67, "durationMs": 600 },
+    { "timeMs": 2100, "midi": 67, "durationMs": 600 },
+    { "timeMs": 2800, "midi": 69, "durationMs": 600 },
+    { "timeMs": 3500, "midi": 69, "durationMs": 600 },
+    { "timeMs": 4200, "midi": 67, "durationMs": 1200 }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "difficulty": "hard",
+  "description": "Full melody with left hand bass notes",
+  "notes": [
+    { "timeMs": 0, "midi": 60, "durationMs": 400 },
+    { "timeMs": 0, "midi": 48, "durationMs": 400 },
+    { "timeMs": 500, "midi": 60, "durationMs": 400 },
+    { "timeMs": 1000, "midi": 67, "durationMs": 400 },
+    { "timeMs": 1000, "midi": 55, "durationMs": 400 },
+    { "timeMs": 1500, "midi": 67, "durationMs": 400 },
+    { "timeMs": 2000, "midi": 69, "durationMs": 400 },
+    { "timeMs": 2000, "midi": 57, "durationMs": 400 },
+    { "timeMs": 2500, "midi": 69, "durationMs": 400 },
+    { "timeMs": 3000, "midi": 67, "durationMs": 800 },
+    { "timeMs": 3000, "midi": 55, "durationMs": 800 },
+
+    { "timeMs": 4000, "midi": 65, "durationMs": 400 },
+    { "timeMs": 4000, "midi": 53, "durationMs": 400 },
+    { "timeMs": 4500, "midi": 65, "durationMs": 400 },
+    { "timeMs": 5000, "midi": 64, "durationMs": 400 },
+    { "timeMs": 5000, "midi": 52, "durationMs": 400 },
+    { "timeMs": 5500, "midi": 64, "durationMs": 400 },
+    { "timeMs": 6000, "midi": 62, "durationMs": 400 },
+    { "timeMs": 6000, "midi": 50, "durationMs": 400 },
+    { "timeMs": 6500, "midi": 62, "durationMs": 400 },
+    { "timeMs": 7000, "midi": 60, "durationMs": 800 },
+    { "timeMs": 7000, "midi": 48, "durationMs": 800 }
+  ]
+}

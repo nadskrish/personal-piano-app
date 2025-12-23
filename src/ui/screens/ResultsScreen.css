@@ -1,0 +1,326 @@
+/* ResultsScreen styles */
+
+.results-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.results-card {
+  background: white;
+  border-radius: 24px;
+  padding: 32px 24px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.results-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.results-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #4f46e5;
+  margin: 0 0 16px;
+}
+
+.stars-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.star {
+  font-size: 48px;
+  animation: star-pop 0.5s ease-out forwards;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.star.earned {
+  filter: none;
+}
+
+.star.empty {
+  filter: grayscale(100%);
+  opacity: 0.3;
+}
+
+@keyframes star-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-20deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+.results-message {
+  font-size: 18px;
+  color: #6366f1;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Song completed */
+.song-completed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.song-icon {
+  font-size: 24px;
+}
+
+.song-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 8px;
+  border-radius: 16px;
+}
+
+.stat-card.score {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+}
+
+.stat-card.accuracy {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+}
+
+.stat-card.streak {
+  background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
+}
+
+.stat-card .stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.stat-card .stat-label {
+  font-size: 12px;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Hit breakdown */
+.hit-breakdown {
+  margin-bottom: 24px;
+}
+
+.breakdown-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.breakdown-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.breakdown-item {
+  display: grid;
+  grid-template-columns: 60px 1fr 30px;
+  align-items: center;
+  gap: 8px;
+}
+
+.breakdown-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.breakdown-bar {
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.breakdown-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease-out;
+}
+
+.breakdown-item.perfect .breakdown-fill {
+  background: linear-gradient(90deg, #4ade80, #22c55e);
+}
+
+.breakdown-item.great .breakdown-fill {
+  background: linear-gradient(90deg, #a3e635, #84cc16);
+}
+
+.breakdown-item.good .breakdown-fill {
+  background: linear-gradient(90deg, #facc15, #eab308);
+}
+
+.breakdown-item.miss .breakdown-fill {
+  background: linear-gradient(90deg, #f87171, #ef4444);
+}
+
+.breakdown-count {
+  font-size: 14px;
+  font-weight: 700;
+  color: #334155;
+  text-align: right;
+}
+
+/* Mistakes section */
+.mistakes-section {
+  background: #fef2f2;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.mistakes-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #991b1b;
+  margin: 0 0 12px;
+}
+
+.mistakes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mistake-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mistake-note {
+  font-weight: 600;
+  color: #dc2626;
+}
+
+.mistake-timing {
+  font-size: 12px;
+  color: #991b1b;
+}
+
+/* Action buttons */
+.results-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.1s;
+}
+
+.action-btn:active {
+  transform: scale(0.95);
+}
+
+.action-btn.replay {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  color: white;
+}
+
+.action-btn.back {
+  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+  color: white;
+}
+
+/* Confetti */
+.confetti-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti-container::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: #fbbf24;
+  animation: confetti-fall 2s linear infinite;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* iPad adjustments */
+@media (min-width: 768px) {
+  .results-card {
+    max-width: 500px;
+    padding: 40px 32px;
+  }
+
+  .results-title {
+    font-size: 42px;
+  }
+
+  .star {
+    font-size: 56px;
+  }
+}

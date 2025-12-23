@@ -1,0 +1,14 @@
+{
+  "id": "twinkle-twinkle",
+  "title": "Twinkle Twinkle Little Star",
+  "shortTitle": "Twinkle Twinkle",
+  "bpm": 100,
+  "midiRange": [60, 69],
+  "thumbnail": "star",
+  "color": "#fef08a",
+  "difficulty": {
+    "simple": "Easy - Right hand melody only",
+    "medium": "Medium - Full melody with timing",
+    "hard": "Hard - Both hands with chords"
+  }
+}

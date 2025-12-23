@@ -1,0 +1,214 @@
+/* HomeScreen styles */
+
+.home-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  z-index: 1;
+}
+
+/* Logo section */
+.home-logo {
+  text-align: center;
+}
+
+.logo-icon {
+  font-size: 80px;
+  display: block;
+  margin-bottom: 16px;
+  animation: bounce-gentle 2s infinite;
+}
+
+.logo-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #0369a1;
+  margin: 0;
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.logo-subtitle {
+  font-size: 24px;
+  color: #0284c7;
+  margin: 8px 0 0;
+  font-weight: 500;
+}
+
+@keyframes bounce-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Buttons */
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.home-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 32px;
+  border: none;
+  border-radius: 24px;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  font-family: inherit;
+}
+
+.home-btn:active {
+  transform: scale(0.95);
+}
+
+.btn-icon {
+  font-size: 32px;
+}
+
+.play-btn {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #78350f;
+  box-shadow:
+    0 6px 0 #b45309,
+    0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.play-btn:active {
+  box-shadow:
+    0 2px 0 #b45309,
+    0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.songs-btn {
+  background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+  color: white;
+  box-shadow:
+    0 6px 0 #6d28d9,
+    0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.songs-btn:active {
+  box-shadow:
+    0 2px 0 #6d28d9,
+    0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.lessons-btn {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  color: white;
+  box-shadow:
+    0 6px 0 #059669,
+    0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.lessons-btn:active {
+  box-shadow:
+    0 2px 0 #059669,
+    0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating notes decoration */
+.home-decoration {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-note {
+  position: absolute;
+  font-size: 48px;
+  color: rgba(3, 105, 161, 0.2);
+  animation: float-up 6s infinite linear;
+}
+
+.floating-note:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-note:nth-child(2) {
+  left: 50%;
+  animation-delay: 2s;
+}
+
+.floating-note:nth-child(3) {
+  left: 85%;
+  animation-delay: 4s;
+}
+
+@keyframes float-up {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 110%;
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+
+/* Parent area trigger */
+.parent-area-trigger {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+/* iPad/tablet adjustments */
+@media (min-width: 768px) {
+  .logo-icon {
+    font-size: 100px;
+  }
+
+  .logo-title {
+    font-size: 64px;
+  }
+
+  .logo-subtitle {
+    font-size: 28px;
+  }
+
+  .home-buttons {
+    max-width: 400px;
+  }
+
+  .home-btn {
+    padding: 24px 40px;
+    font-size: 32px;
+  }
+}
