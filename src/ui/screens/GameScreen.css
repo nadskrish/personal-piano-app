@@ -169,9 +169,6 @@
 /* Falling notes */
 .falling-note {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 7.5%;
   height: 48px;
   display: flex;
   align-items: center;
@@ -183,19 +180,19 @@
   color: #78350f;
   border: 2px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  will-change: transform;
-  transition: opacity 0.15s;
+  transition: opacity 0.15s, transform 0.1s;
+  margin-left: 0.5%;
 }
 
 .falling-note.black {
-  width: 5%;
   background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
   color: #faf5ff;
   border-color: rgba(255, 255, 255, 0.2);
+  z-index: 5;
 }
 
 .falling-note.hit {
-  transform: scale(0.8);
+  transform: scale(0.85);
 }
 
 .falling-note.hit-perfect {
@@ -310,7 +307,7 @@
 /* Keyboard container */
 .keyboard-container {
   background: #e2e8f0;
-  padding: 12px 8px 24px;
+  padding: 12px 0 24px;
   flex-shrink: 0;
 }
 

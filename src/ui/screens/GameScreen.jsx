@@ -17,24 +17,40 @@ import './GameScreen.css';
 const HIT_LINE_BOTTOM = 60;
 const NOTE_SPEED = 0.25;
 const LOOK_AHEAD_MS = 3500;
+const START_MIDI = 60;
+const END_MIDI = 72;
 
-// Get lane position for a MIDI note
-function getLanePosition(midi, startMidi = 60, endMidi = 72) {
-  const noteInOctave = midi % 12;
-  const isBlack = [1, 3, 6, 8, 10].includes(noteInOctave);
-
-  let whiteKeyCount = 0;
+// Count white keys in range (C4 to C5 = 8 white keys)
+function countWhiteKeys(startMidi, endMidi) {
+  let count = 0;
   for (let m = startMidi; m <= endMidi; m++) {
-    const isBlackKey = [1, 3, 6, 8, 10].includes(m % 12);
-    if (m === midi) {
-      if (isBlack) {
-        return ((whiteKeyCount - 1 + 0.65) / 13) * 100;
-      }
-      return (whiteKeyCount / 13) * 100;
-    }
-    if (!isBlackKey) whiteKeyCount++;
+    if (![1, 3, 6, 8, 10].includes(m % 12)) count++;
   }
-  return 50;
+  return count;
+}
+
+const WHITE_KEY_COUNT = countWhiteKeys(START_MIDI, END_MIDI);
+
+// Get lane position for a MIDI note (returns left percentage)
+function getLanePosition(midi, startMidi = START_MIDI) {
+  const isBlack = [1, 3, 6, 8, 10].includes(midi % 12);
+  const whiteKeyWidth = 100 / WHITE_KEY_COUNT;
+
+  // Count white keys before this note
+  let whiteKeyIndex = 0;
+  for (let m = startMidi; m < midi; m++) {
+    if (![1, 3, 6, 8, 10].includes(m % 12)) {
+      whiteKeyIndex++;
+    }
+  }
+
+  if (isBlack) {
+    // Black key: position at 0.65 of the way through previous white key
+    return (whiteKeyIndex - 1 + 0.65) * whiteKeyWidth;
+  } else {
+    // White key: start of the key position
+    return whiteKeyIndex * whiteKeyWidth;
+  }
 }
 
 export function GameScreen({ songId, difficulty, onBack, onFinish }) {
@@ -225,13 +241,13 @@ export function GameScreen({ songId, difficulty, onBack, onFinish }) {
 
       {/* Falling notes area */}
       <div className="notes-area" ref={containerRef}>
-        {/* Lane guides */}
+        {/* Lane guides - one per white key */}
         <div className="lane-guides">
-          {Array.from({ length: 13 }).map((_, i) => (
+          {Array.from({ length: WHITE_KEY_COUNT + 1 }).map((_, i) => (
             <div
               key={i}
               className="lane-guide"
-              style={{ left: `${(i / 13) * 100}%` }}
+              style={{ left: `${(i / WHITE_KEY_COUNT) * 100}%` }}
             />
           ))}
         </div>
@@ -243,18 +259,23 @@ export function GameScreen({ songId, difficulty, onBack, onFinish }) {
         />
 
         {/* Notes */}
-        {notes.map(note => (
-          <div
-            key={note.id}
-            className={`falling-note ${note.isBlack ? 'black' : ''} ${note.hit ? 'hit' : ''} ${note.hitResult ? `hit-${note.hitResult}` : ''}`}
-            style={{
-              transform: `translateX(${note.x}%) translateY(${note.y}px)`,
-              opacity: note.hit ? 0.3 : 1,
-            }}
-          >
-            {getNoteLetter(note.midi)}
-          </div>
-        ))}
+        {notes.map(note => {
+          const noteWidth = note.isBlack ? (100 / WHITE_KEY_COUNT) * 0.6 : (100 / WHITE_KEY_COUNT) - 1;
+          return (
+            <div
+              key={note.id}
+              className={`falling-note ${note.isBlack ? 'black' : ''} ${note.hit ? 'hit' : ''} ${note.hitResult ? `hit-${note.hitResult}` : ''}`}
+              style={{
+                left: `${note.x}%`,
+                top: `${note.y}px`,
+                width: `${noteWidth}%`,
+                opacity: note.hit ? 0.3 : 1,
+              }}
+            >
+              {getNoteLetter(note.midi)}
+            </div>
+          );
+        })}
 
         {/* Overlays */}
         {gameState === GameState.IDLE && (
