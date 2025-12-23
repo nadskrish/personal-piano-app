@@ -1,0 +1,14 @@
+{
+  "id": "london-bridge",
+  "title": "London Bridge Is Falling Down",
+  "shortTitle": "London Bridge",
+  "bpm": 100,
+  "midiRange": [60, 72],
+  "thumbnail": "bridge",
+  "color": "#c7d2fe",
+  "difficulty": {
+    "simple": "Easy - Simple melody",
+    "medium": "Medium - Full song",
+    "hard": "Hard - With chords"
+  }
+}

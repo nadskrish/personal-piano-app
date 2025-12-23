@@ -1,0 +1,14 @@
+{
+  "id": "old-macdonald",
+  "title": "Old MacDonald Had a Farm",
+  "shortTitle": "Old MacDonald",
+  "bpm": 110,
+  "midiRange": [60, 72],
+  "thumbnail": "farm",
+  "color": "#bbf7d0",
+  "difficulty": {
+    "simple": "Easy - Farm fun",
+    "medium": "Medium - E-I-E-I-O",
+    "hard": "Hard - Full farm"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "wheels-on-bus",
+  "title": "The Wheels on the Bus",
+  "shortTitle": "Wheels on Bus",
+  "bpm": 100,
+  "midiRange": [60, 72],
+  "thumbnail": "bus",
+  "color": "#fed7aa",
+  "difficulty": {
+    "simple": "Easy - Round and round",
+    "medium": "Medium - Full verses",
+    "hard": "Hard - All day long"
+  }
+}

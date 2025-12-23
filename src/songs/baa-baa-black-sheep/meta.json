@@ -1,0 +1,14 @@
+{
+  "id": "baa-baa-black-sheep",
+  "title": "Baa Baa Black Sheep",
+  "shortTitle": "Black Sheep",
+  "bpm": 100,
+  "midiRange": [60, 69],
+  "thumbnail": "sheep",
+  "color": "#d1d5db",
+  "difficulty": {
+    "simple": "Easy - Woolly tune",
+    "medium": "Medium - Three bags full",
+    "hard": "Hard - Full nursery"
+  }
+}

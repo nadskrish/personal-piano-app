@@ -1,0 +1,14 @@
+{
+  "id": "row-your-boat",
+  "title": "Row Row Row Your Boat",
+  "shortTitle": "Row Your Boat",
+  "bpm": 90,
+  "midiRange": [60, 72],
+  "thumbnail": "boat",
+  "color": "#bfdbfe",
+  "difficulty": {
+    "simple": "Easy - Gentle rowing",
+    "medium": "Medium - Full verse",
+    "hard": "Hard - Round style"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "happy-birthday",
+  "title": "Happy Birthday",
+  "shortTitle": "Happy Birthday",
+  "bpm": 100,
+  "midiRange": [60, 72],
+  "thumbnail": "cake",
+  "color": "#fef08a",
+  "difficulty": {
+    "simple": "Easy - Slow melody",
+    "medium": "Medium - Full song",
+    "hard": "Hard - With bass"
+  }
+}

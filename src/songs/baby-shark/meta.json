@@ -1,0 +1,14 @@
+{
+  "id": "baby-shark",
+  "title": "Baby Shark",
+  "shortTitle": "Baby Shark",
+  "bpm": 115,
+  "midiRange": [60, 72],
+  "thumbnail": "shark",
+  "color": "#a5f3fc",
+  "difficulty": {
+    "simple": "Easy - Doo doo doo",
+    "medium": "Medium - Shark family",
+    "hard": "Hard - Full ocean"
+  }
+}

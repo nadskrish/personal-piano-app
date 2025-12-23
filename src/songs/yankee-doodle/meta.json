@@ -1,0 +1,14 @@
+{
+  "id": "yankee-doodle",
+  "title": "Yankee Doodle",
+  "shortTitle": "Yankee Doodle",
+  "bpm": 110,
+  "midiRange": [60, 72],
+  "thumbnail": "flag",
+  "color": "#60a5fa",
+  "difficulty": {
+    "simple": "Easy - Ride to town",
+    "medium": "Medium - Pony ride",
+    "hard": "Hard - Macaroni!"
+  }
+}

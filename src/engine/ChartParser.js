@@ -41,7 +41,11 @@ export function parseChart(chartData) {
   }
 
   const parsedNotes = chartData.notes.map((note, index) => {
-    if (typeof note.timeMs !== 'number' || note.timeMs < 0) {
+    // Support both timeMs and time property names
+    const timeMs = note.timeMs ?? note.time;
+    const durationMs = note.durationMs ?? note.duration ?? 400;
+
+    if (typeof timeMs !== 'number' || timeMs < 0) {
       throw new Error(`Invalid note at index ${index}: invalid timeMs`);
     }
     if (typeof note.midi !== 'number' || note.midi < 0 || note.midi > 127) {
@@ -50,9 +54,9 @@ export function parseChart(chartData) {
 
     return {
       id: `note-${index}`,
-      timeMs: note.timeMs,
+      timeMs: timeMs,
       midi: note.midi,
-      durationMs: note.durationMs || 400, // Default duration
+      durationMs: durationMs,
       noteName: MIDI_TO_NOTE[note.midi] || `M${note.midi}`,
       hit: false,
       hitResult: null,

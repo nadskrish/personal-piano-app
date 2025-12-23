@@ -1,0 +1,14 @@
+{
+  "id": "mary-lamb",
+  "title": "Mary Had a Little Lamb",
+  "shortTitle": "Mary's Lamb",
+  "bpm": 100,
+  "midiRange": [60, 69],
+  "thumbnail": "lamb",
+  "color": "#fce7f3",
+  "difficulty": {
+    "simple": "Easy - Slow single notes",
+    "medium": "Medium - Full melody",
+    "hard": "Hard - With harmony"
+  }
+}

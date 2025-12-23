@@ -1,0 +1,14 @@
+{
+  "id": "ode-to-joy",
+  "title": "Ode to Joy",
+  "shortTitle": "Ode to Joy",
+  "bpm": 80,
+  "midiRange": [60, 69],
+  "thumbnail": "music",
+  "color": "#fbbf24",
+  "difficulty": {
+    "simple": "Easy - Joyful melody",
+    "medium": "Medium - Beethoven's theme",
+    "hard": "Hard - Full symphony"
+  }
+}

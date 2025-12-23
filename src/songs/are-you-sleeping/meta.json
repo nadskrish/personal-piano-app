@@ -1,0 +1,14 @@
+{
+  "id": "are-you-sleeping",
+  "title": "Are You Sleeping (Frère Jacques)",
+  "shortTitle": "Are You Sleeping",
+  "bpm": 95,
+  "midiRange": [60, 67],
+  "thumbnail": "bell",
+  "color": "#c4b5fd",
+  "difficulty": {
+    "simple": "Easy - Morning bells",
+    "medium": "Medium - Brother John",
+    "hard": "Hard - Ding ding dong"
+  }
+}

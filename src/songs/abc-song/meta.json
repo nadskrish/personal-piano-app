@@ -1,0 +1,14 @@
+{
+  "id": "abc-song",
+  "title": "ABC Song",
+  "shortTitle": "ABC Song",
+  "bpm": 100,
+  "midiRange": [60, 69],
+  "thumbnail": "abc",
+  "color": "#fca5a5",
+  "difficulty": {
+    "simple": "Easy - Learn ABCs",
+    "medium": "Medium - Full alphabet",
+    "hard": "Hard - Sing along"
+  }
+}

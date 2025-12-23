@@ -1,0 +1,14 @@
+{
+  "id": "skip-to-my-lou",
+  "title": "Skip to My Lou",
+  "shortTitle": "Skip to My Lou",
+  "bpm": 110,
+  "midiRange": [60, 69],
+  "thumbnail": "skip",
+  "color": "#f9a8d4",
+  "difficulty": {
+    "simple": "Easy - My darling",
+    "medium": "Medium - Skip around",
+    "hard": "Hard - Lou Lou Lou"
+  }
+}

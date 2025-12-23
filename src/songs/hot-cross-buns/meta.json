@@ -1,0 +1,14 @@
+{
+  "id": "hot-cross-buns",
+  "title": "Hot Cross Buns",
+  "shortTitle": "Hot Cross Buns",
+  "bpm": 90,
+  "midiRange": [60, 67],
+  "thumbnail": "buns",
+  "color": "#fcd34d",
+  "difficulty": {
+    "simple": "Easy - Just 3 notes!",
+    "medium": "Medium - Full rhyme",
+    "hard": "Hard - Baker's dozen"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "three-blind-mice",
+  "title": "Three Blind Mice",
+  "shortTitle": "Blind Mice",
+  "bpm": 95,
+  "midiRange": [60, 69],
+  "thumbnail": "mouse",
+  "color": "#a1a1aa",
+  "difficulty": {
+    "simple": "Easy - See how they run",
+    "medium": "Medium - Farmer's wife",
+    "hard": "Hard - Carving knife"
+  }
+}

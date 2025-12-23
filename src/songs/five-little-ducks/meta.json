@@ -1,0 +1,14 @@
+{
+  "id": "five-little-ducks",
+  "title": "Five Little Ducks",
+  "shortTitle": "Five Ducks",
+  "bpm": 100,
+  "midiRange": [60, 72],
+  "thumbnail": "duck",
+  "color": "#fef08a",
+  "difficulty": {
+    "simple": "Easy - Quack quack",
+    "medium": "Medium - Over the hill",
+    "hard": "Hard - All five ducks"
+  }
+}

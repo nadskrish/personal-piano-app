@@ -1,0 +1,14 @@
+{
+  "id": "this-old-man",
+  "title": "This Old Man",
+  "shortTitle": "This Old Man",
+  "bpm": 100,
+  "midiRange": [60, 69],
+  "thumbnail": "drum",
+  "color": "#86efac",
+  "difficulty": {
+    "simple": "Easy - Knick knack",
+    "medium": "Medium - Paddy whack",
+    "hard": "Hard - Rolling home"
+  }
+}

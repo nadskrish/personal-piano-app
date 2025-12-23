@@ -1,0 +1,14 @@
+{
+  "id": "itsy-bitsy-spider",
+  "title": "Itsy Bitsy Spider",
+  "shortTitle": "Itsy Bitsy",
+  "bpm": 95,
+  "midiRange": [60, 72],
+  "thumbnail": "spider",
+  "color": "#e9d5ff",
+  "difficulty": {
+    "simple": "Easy - Climbing up",
+    "medium": "Medium - Water spout",
+    "hard": "Hard - Sun and rain"
+  }
+}
