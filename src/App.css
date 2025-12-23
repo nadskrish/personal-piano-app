@@ -9,7 +9,6 @@
 html, body, #root {
   height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 
 body {
@@ -30,11 +29,9 @@ body {
   overflow: hidden;
 }
 
-/* Prevent iOS bounce */
-html {
-  position: fixed;
-  height: 100%;
-  overflow: hidden;
+/* Prevent iOS bounce - only on body, allow scrolling in children */
+body {
+  overscroll-behavior: none;
 }
 
 /* Custom scrollbar for webkit */

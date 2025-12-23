@@ -3,8 +3,9 @@
 .song-list-screen {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100%;
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  overflow: hidden;
 }
 
 /* Header */
@@ -48,10 +49,14 @@
 /* Song grid */
 .song-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 20px;
-  padding: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 20px;
   flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding-bottom: 40px;
 }
 
 /* Song card */
@@ -141,7 +146,28 @@
   opacity: 1;
 }
 
-/* iPad adjustments */
+/* Small mobile adjustments */
+@media (max-width: 360px) {
+  .song-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .song-card {
+    padding: 16px 12px;
+  }
+
+  .song-thumbnail {
+    font-size: 40px;
+  }
+
+  .song-title {
+    font-size: 16px;
+  }
+}
+
+/* iPad/tablet adjustments */
 @media (min-width: 768px) {
   .song-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
